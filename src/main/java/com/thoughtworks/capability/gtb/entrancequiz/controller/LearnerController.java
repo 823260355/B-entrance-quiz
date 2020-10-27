@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
@@ -49,5 +50,11 @@ public class LearnerController {
     public ResponseEntity addLearner(@RequestBody String name) {
         learnerService.addLearner(name);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/groupLearner")
+    public ResponseEntity getLearnerGroups() {
+        Map<String, List<Learner>> groupsLearner = learnerService.getLearnerGroups();
+        return ResponseEntity.ok(groupsLearner);
     }
 }
