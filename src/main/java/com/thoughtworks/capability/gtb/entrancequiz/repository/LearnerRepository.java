@@ -9,5 +9,6 @@ import java.util.List;
 
 @Repository
 public interface LearnerRepository extends CrudRepository<LearnerEntity, Integer> {
+    //TODO GTB-知识点: - LearnerRepository.java:12 JPA知识点使用错误，声明了自定义方法，但是没有指明sql，JPA无法正常解析
     List<Learner> getLearnerList();
 }

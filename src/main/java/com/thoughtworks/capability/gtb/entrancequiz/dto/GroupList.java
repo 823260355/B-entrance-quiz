@@ -10,6 +10,7 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupList {
+    //TODO GTB-工程实践: - GroupList.java:13 learnerList数据的存储，不是这个dto的职责。数据存储相关的操作，应该由repository来做。
     public List<Learner> learnerList = new ArrayList();
     public int groupNum = 6;
     public static String TEAM_LASTFIX = " 组";
@@ -18,6 +19,8 @@ public class GroupList {
 
     Map<String, List<Learner>> groupLearner = new LinkedHashMap<>();
 
+    //TODO GTB-工程实践: - GroupList.java:21 长方法，需要按模块抽取方法，进行重构
+    //TODO GTB-工程实践: - GroupList.java:23  randomGroup这个操作不是dto的职责
     public Map<String, List<Learner>> randomGroup() {
         List<Learner> list = this.learnerList;
         Collections.shuffle(list);

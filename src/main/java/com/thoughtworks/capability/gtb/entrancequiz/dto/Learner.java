@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//TODO GTB-知识点: * 建议了解下DTO使用场景
 public class Learner {
     String name;
 }

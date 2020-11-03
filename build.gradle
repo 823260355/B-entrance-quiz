@@ -20,6 +20,7 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	//TODO GTB-综合: - build.gradle:23 Lombok相关包导入少了，了解下如果要使用Lombok，至少需要导入什么样的包
 	compile 'org.projectlombok:lombok'
 }
 
